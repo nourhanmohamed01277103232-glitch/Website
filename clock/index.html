@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Multi Projects</title>
+  <link rel="stylesheet" href="style7.css">
+
+</head>
+<body>
+
+<!-- 🌟 STARS -->
+<div class="stars" id="stars"></div>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+  <h1>Loading Animation</h1>
+  <div class="loading">
+    <div></div><div></div><div></div>
+  </div>
+  <button onclick="goToPage2()">Next</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+  <h1>Transform Project</h1>
+
+  <div class="content">
+    <div class="box" onclick="transformBox(this,'scale')">Scale</div>
+    <div class="box" onclick="transformBox(this,'rotate')">Rotate</div>
+    <div class="box" onclick="transformBox(this,'skew')">Skew</div>
+    <div class="box" onclick="transformBox(this,'translate')">Translate</div>
+    <div class="box" onclick="transformBox(this,'orbit')">Orbit</div>
+  </div>
+
+  <button onclick="goToPage3()">Next</button>
+  <button onclick="goToPage1()">Back</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+  <h1>Clock System</h1>
+
+  <div class="clock">
+    <div class="hand hour" id="h"></div>
+    <div class="hand minute" id="m"></div>
+    <div class="hand second" id="s"></div>
+    <div class="centerDot"></div>
+    <div class="clockText" id="clockText"></div>
+  </div>
+
+  <button onclick="goToPage2()">Back</button>
+</div>
+
+<script>
+    const stars=document.getElementById("stars");
+for(let i=0;i<120;i++){
+  let s=document.createElement("div");
+  s.classList.add("star");
+  s.style.left=Math.random()*100+"vw";
+  s.style.top=Math.random()*100+"vh";
+  s.style.animationDuration=(3+Math.random()*8)+"s";
+
+  s.onclick=()=>{
+    s.classList.toggle("blue");
+  }
+
+  stars.appendChild(s);
+}
+
+// NAV
+function goToPage1(){show(1)}
+function goToPage2(){show(2)}
+function goToPage3(){show(3)}
+function show(n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page'+n).classList.add('active');
+}
+
+// TRANSFORM
+function transformBox(el,type){
+  if(type==='scale'){
+    el.style.transform='scale(1.5)';
+    setTimeout(()=>el.style.transform='none',1000);
+  }
+  else if(type==='rotate'){
+    el.classList.add('spin');
+    setTimeout(()=>el.classList.remove('spin'),1000);
+  }
+  else if(type==='skew'){
+    el.style.transform='skew(20deg,10deg)';
+    setTimeout(()=>el.style.transform='none',1000);
+  }
+  else if(type==='translate'){
+    el.style.transform='translate(30px,30px)';
+    setTimeout(()=>el.style.transform='none',1000);
+  }
+  else if(type==='orbit'){
+    el.classList.add('orbit');
+    setTimeout(()=>el.classList.remove('orbit'),2000);
+  }
+}
+
+// CLOCK
+function drawClock(){
+  const now=new Date();
+
+  const sec=now.getSeconds()*6;
+  const min=now.getMinutes()*6;
+  const hr=(now.getHours()%12)*30;
+
+  document.getElementById('s').style.transform=`translateX(-50%) rotate(${sec}deg)`;
+  document.getElementById('m').style.transform=`translateX(-50%) rotate(${min}deg)`;
+  document.getElementById('h').style.transform=`translateX(-50%) rotate(${hr}deg)`;
+
+  document.getElementById('clockText').innerText = now.toLocaleTimeString();
+}
+
+setInterval(drawClock,1000);
+drawClock();
+
+</script>
+
+</body>
+</html>
