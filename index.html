@@ -1,193 +1,147 @@
+<!--<--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My CV</title>
+  <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header>
+    <h1>Nour</h1>
+    <p>Front-End Developer</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li>About</li>
+      <li>Skills</li>
+      <li>Projects</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+
+  <section class="content">
+
+   
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I am a passionate student learning web development and building modern websites.</p>
+    </div>
+
+    <div class="card">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>C++</li>
+        <li>Problem Solving</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Projects</h2>
+      <p>✔ CV Website</p>
+      <p>✔ Alarm System Project</p>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: nour@email.com</p>
+      <p>Phone: 01234567</p>
+    </div>
+     
+  </section>
+
+  <footer>
+    <p>© 2026 Nour</p>
+  </footer>
+
+</div>
+
+</body>
+</html>-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Cyber Chronograph Dashboard</title>
-  <link rel="stylesheet" href="style7.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Nourhan | Front-End Developer</title>
+  <!-- ربط خط Poppins الحديث -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- ربط مكتبة الأيقونات Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- ملف الـ CSS الخاص بكِ -->
+  <link rel="stylesheet" href="style6.css">
 </head>
 <body>
 
-  <!-- السترة الخلفية للتأثيرات الجزيئية -->
-  <canvas id="particleCanvas"></canvas>
+<div class="page">
 
-  <!-- شريط الحالة السيبراني السفلي -->
-  <div class="system-status">
-    <span>SYSTEM: ONLINE</span>
-    <span>FPS: 60</span>
-    <span id="liveTime">00:00:00</span>
-  </div>
+  <header>
+    <h1>Nourhan</h1>
+    <p><i class="fa-solid fa-code"></i> Front-End Developer</p>
+  </header>
 
-  <nav class="premium-nav">
-    <div class="brand">NEXUS<span>.OS</span></div>
-    <div class="tabs">
-      <div class="tab-indicator"></div>
-      <button class="tab-link active" onclick="switchTab(0)">LAB LOADER</button>
-      <button class="tab-link" onclick="switchTab(1)">MATRIX FX</button>
-      <button class="tab-link" onclick="switchTab(2)">3D CHRONO</button>
-    </div>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
-  <div class="viewport">
-    <!-- TAB 1: ADVANCED LOADER -->
-    <div class="view-panel active">
-      <div class="quantum-loader">
-        <div class="core"></div>
-        <div class="ring ring-1"></div>
-        <div class="ring ring-2"></div>
-        <div class="ring ring-3"></div>
-      </div>
-      <h3 class="panel-title">Quantum Core Engine</h3>
-      <p class="panel-subtitle">Simulating synchronized hardware acceleration arrays.</p>
+  <section class="content">
+
+    <!-- About -->
+    <div class="card" id="about">
+      <h2><i class="fa-solid fa-user"></i> About Me</h2>
+      <p>I am a passionate student learning web development and building modern websites.</p>
     </div>
 
-    <!-- TAB 2: INTERACTIVE MATRIX -->
-    <div class="view-panel">
-      <h3 class="panel-title">Kinetic Transform Labs</h3>
-      <p class="panel-subtitle">Hover or click to disturb the local geometric vectors.</p>
-      <div class="matrix-container">
-        <div class="cyber-card" onclick="triggerFx(this, 'hyper')">
-          <div class="glitch-text">HYPER</div>
-        </div>
-        <div class="cyber-card" onclick="triggerFx(this, 'portal')">
-          <div class="glitch-text">PORTAL</div>
-        </div>
-        <div class="cyber-card" onclick="triggerFx(this, 'vortex')">
-          <div class="glitch-text">VORTEX</div>
-        </div>
-      </div>
+    <!-- Skills -->
+    <div class="card" id="skills">
+      <h2><i class="fa-solid fa-laptop-code"></i> Skills</h2>
+      <ul class="skills">
+        <li><i class="fa-brands fa-html5"></i> HTML</li>
+        <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+        <li><i class="fa-solid fa-terminal"></i> C++</li>
+        <li><i class="fa-solid fa-brain"></i> Problem Solving</li>
+      </ul>
     </div>
 
-    <!-- TAB 3: NEUMORPHIC 3D CLOCK -->
-    <div class="view-panel">
-      <div class="chrono-stage">
-        <div class="neo-clock">
-          <div class="face-glow"></div>
-          <div class="brand-label">CHRONO</div>
-          <div class="pivots">
-            <span class="p-12">12</span><span class="p-3">3</span>
-            <span class="p-6">6</span><span class="p-9">9</span>
-          </div>
-          <div class="premium-hand h-hour" id="hourHand"></div>
-          <div class="premium-hand h-min" id="minHand"></div>
-          <div class="premium-hand h-sec" id="secHand"></div>
-          <div class="cap"></div>
-        </div>
+    <!-- Projects -->
+    <div class="card" id="projects">
+      <h2><i class="fa-solid fa-folder-open"></i> Projects</h2>
+      <p><a href="#" class="project-link"><i class="fa-solid fa-globe"></i> CV Website</a></p>
+      <p><a href="#" class="project-link"><i class="fa-solid fa-clock"></i> Alarm System Project</a></p>
+    </div>
+
+    <!-- Contact -->
+    <div class="card" id="contact">
+      <h2><i class="fa-solid fa-address-card"></i> Contact & Profiles</h2>
+      <p><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:nour@email.com">nour@email.com</a></p>
+      <p><i class="fa-solid fa-phone"></i> Phone: 01234567</p>
+      
+      <!-- روابط الحسابات الشخصية الخاصة بكِ -->
+      <div class="social-links">
+        <p><i class="fa-brands fa-github"></i> GitHub: <a href="https://github.com/nourhanmohamed01277103232-glitch" target="_blank">nourhanmohamed01277103232-glitch</a></p>
+        <p><i class="fa-brands fa-linkedin"></i> LinkedIn: <a href="https://wwwlinkedin.com/in/nourhan-mohamed-285a68394" target="_blank">LinkedIn Profile</a></p>
       </div>
     </div>
-  </div>
+     
+  </section>
 
-  <!-- صوت التكة التفاعلي (اختياري، يعمل عبر سياق ويب مدمج لضمان الجودة) -->
-  <script>
-    // 🌌 ENGINE 1: PARTICLE CANVAS BACKGROUND (تأثير جزيئات يتفاعل مع الماوس)
-    const canvas = document.getElementById('particleCanvas');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-    const mouse = { x: null, y: null, radius: 120 };
+  <footer>
+    <p>© 2026 Nourhan. Built with <i class="fa-solid fa-heart" style="color: #ff4d4d;"></i></p>
+  </footer>
 
-    window.addEventListener('resize', resizeCanvas);
-    window.addEventListener('mousemove', (e) => { mouse.x = e.x; mouse.y = e.y; });
-    window.addEventListener('mouseout', () => { mouse.x = null; mouse.y = null; });
+</div>
 
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initParticles();
-    }
-
-    class Particle {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 0.5;
-        this.baseX = this.x;
-        this.baseY = this.y;
-        this.density = (Math.random() * 30) + 10;
-        this.color = Math.random() > 0.5 ? '#06b6d4' : '#6366f1';
-      }
-      draw() {
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.closePath();
-        ctx.fill();
-      }
-      update() {
-        let dx = mouse.x - this.x;
-        let dy = mouse.y - this.y;
-        let distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < mouse.radius) {
-          let force = (mouse.radius - distance) / mouse.radius;
-          let directionX = (dx / distance) * force * this.density;
-          let directionY = (dy / distance) * force * this.density;
-          this.x -= directionX;
-          this.y -= directionY;
-        } else {
-          if (this.x !== this.baseX) this.x -= (this.x - this.baseX) * 0.08;
-          if (this.y !== this.baseY) this.y -= (this.y - this.baseY) * 0.08;
-        }
-      }
-    }
-
-    function initParticles() {
-      particles = [];
-      let count = Math.floor((canvas.width * canvas.height) / 9000);
-      for(let i=0; i<count; i++) particles.push(new Particle());
-    }
-
-    function animateParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => { p.update(); p.draw(); });
-      requestAnimationFrame(animateParticles);
-    }
-    resizeCanvas();
-    animateParticles();
-
-    // 🧭 ENGINE 2: SLICK TAB NAVIGATION
-    function switchTab(index) {
-      const links = document.querySelectorAll('.tab-link');
-      const panels = document.querySelectorAll('.view-panel');
-      const indicator = document.querySelector('.tab-indicator');
-      
-      links.forEach(l => l.classList.remove('active'));
-      panels.forEach(p => p.classList.remove('active'));
-      
-      links[index].classList.add('active');
-      panels[index].classList.add('active');
-      indicator.style.left = `${links[index].offsetLeft}px`;
-      indicator.style.width = `${links[index].offsetWidth}px`;
-    }
-    window.addEventListener('load', () => switchTab(0));
-
-    // 🎛️ ENGINE 3: KINETIC FX LABS
-    function triggerFx(card, type) {
-      card.className = 'cyber-card';
-      if(type === 'hyper') card.classList.add('fx-hyper');
-      if(type === 'portal') card.classList.add('fx-portal');
-      if(type === 'vortex') card.classList.add('fx-vortex');
-      setTimeout(() => card.className = 'cyber-card', 1500);
-    }
-
-    // 🕒 ENGINE 4: HIGH-END KINETIC CHRONOGRAPH
-    function syncTime() {
-      const now = new Date();
-      const sec = now.getSeconds();
-      const min = now.getMinutes();
-      const hr = now.getHours();
-
-      const secDeg = sec * 6;
-      const minDeg = (min * 6) + (sec * 0.1);
-      const hrDeg = ((hr % 12) * 30) + (min * 0.5);
-
-      document.getElementById('secHand').style.transform = `rotate(${secDeg}deg)`;
-      document.getElementById('minHand').style.transform = `rotate(${minDeg}deg)`;
-      document.getElementById('hourHand').style.transform = `rotate(${hrDeg}deg)`;
-      
-      document.getElementById('liveTime').innerText = now.toLocaleTimeString();
-    }
-    setInterval(syncTime, 1000);
-    syncTime();
-  </script>
 </body>
 </html>
