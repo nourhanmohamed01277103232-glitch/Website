@@ -67,7 +67,7 @@ ul {
     display: flex;
     justify-content: space-around;
 }*/
-body {
+/*body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f5f5f5;
@@ -84,7 +84,7 @@ body {
 }
 
 /* HEADER */
-header {
+/*header {
     grid-area: head;
     background: linear-gradient(45deg, #6a11cb, #2575fc);
     color: white;
@@ -93,7 +93,7 @@ header {
 }
 
 /* NAV */
-nav {
+/*nav {
     grid-area: nav;
     background: #222;
 }
@@ -118,7 +118,7 @@ nav li:hover {
 }
 
 /* SECTION */
-.content {
+/*.content {
     grid-area: section;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -126,7 +126,6 @@ nav li:hover {
     padding: 30px;
 }
 
-/* CARDS */
 .card {
     background: white;
     padding: 20px;
@@ -139,7 +138,7 @@ nav li:hover {
     transform: translateY(-10px);
 }
 
-/* SKILLS */
+
 .skills {
     list-style: none;
     padding: 0;
@@ -154,11 +153,199 @@ nav li:hover {
     display: inline-block;
 }
 
-/* FOOTER */
+
 footer {
     grid-area: footer;
     background: black;
     color: white;
     text-align: center;
     padding: 15px;
+}*/
+body {
+    margin: 0;
+    /* تفعيل خط Poppins العصري */
+    font-family: 'Poppins', Arial, sans-serif; 
+    
+    /* رابط الصورة الاحترافية المباشرة بدون أي طبقة شفافة */
+    background-image: url('https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=2000');
+    
+    /* ضبط أبعاد الصورة وتثبيتها بشكل مثالي خلف الكروت */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    color: #333;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas:
+    "head head head head head head head head head head"
+    "nav nav nav nav nav nav nav nav nav nav"
+    "section section section section section section section section section section"
+    "footer footer footer footer footer footer footer footer footer footer";
+}
+
+/* HEADER */
+header {
+    grid-area: head;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 10px 0 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* NAV */
+nav {
+    grid-area: nav;
+    background: #1e1e24;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav li a:hover {
+    color: #00d4ff;
+}
+
+/* SECTION */
+.content {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 40px 10%;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #2575fc;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.card p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* تأثير الـ Hover الاحترافي لتنعيم حركة الكروت وبث الحياة فيها */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(37, 117, 252, 0.15);
+}
+
+/* SKILLS */
+.skills {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.skills li {
+    background: #eef2fe;
+    color: #2575fc;
+    font-weight: 500;
+    margin: 6px 4px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skills li i {
+    margin-right: 5px;
+}
+
+.skills li:hover {
+    background: #2575fc;
+    color: white;
+}
+
+/* روابط المشاريع والاتصال داخل الكروت */
+.project-link, .card a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover, .card a:hover {
+    color: #6a11cb;
+}
+
+.card i {
+    margin-right: 8px;
+    color: #6a11cb;
+}
+
+/* قسم الروابط الاجتماعية الجديد */
+.social-links {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.social-links p i {
+    font-size: 1.1rem;
+}
+
+.fa-github:hover { color: #24292e; }
+.fa-linkedin:hover { color: #0077b5; }
+
+/* FOOTER */
+footer {
+    grid-area: footer;
+    background: #1e1e24;
+    color: #a0a0a0;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #2d2d35;
 }
